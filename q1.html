@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Action Attribute Explanation</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Post Action Attribute</h1>
+    </header>
+
+    <main>
+        <!-- First form action URL -->
+        <h2>http://localhost:3002/send/</h2>
+        <p>
+            This action URL will <strong>not work</strong> on GitHub Pages. GitHub Pages is a static site hosting
+            service, which means that it does not support running a backend server or processing POST requests.
+            The URL `http://localhost:3002/send/` refers to a local server running on your own machine, which
+            is only accessible locally. Since GitHub Pages cannot run local servers, this action URL won't
+            work when hosted on GitHub Pages.
+        </p>
+
+        <!-- Second form action URL -->
+        <h2>https://dry-bayou-18746.herokuapp.com/send/</h2>
+        <p>
+            This action URL will <strong>work</strong> on GitHub Pages. The URL `https://dry-bayou-18746.herokuapp.com/send/`
+            points to a hosted server on Heroku, which is a cloud-based platform that can handle POST requests
+            and process the form submission. Since this is a public, hosted server, GitHub Pages can make the
+            request to it, and the form will function as expected.
+        </p>
+    </main>
+
+    <footer>
+        <p>Emma Shackell; 2024</p>
+    </footer>
+
+</body>
+
+</html>

@@ -2,26 +2,38 @@
 <html lang="en">
 
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> <!-- Handwriting font -->
     <style>
+        /* Styling the input with placeholder */
+        input::placeholder {
+            color: lightgray;
+            font-style: italic;
+        }
+
+        /* Styling the answer */
+        #answer {
+            color: red;               /* Red text */
+            font-size: 2em;            /* Twice the normal height */
+            font-family: 'Pacifico', cursive; /* Handwriting font */
+        }
     </style>
 </head>
 
 <body>
-    <h1>The magic 8 ball</h1>
-    <input /><br />
+    <h1>The Magic 8 Ball</h1>
+    <input placeholder="Ask me anything" /><br />
     <x-magic />
     <script>
-        class Magic8Ball extends HTMLElement{
-            connectedCallback(){
-                this.innerHTML = 
-`
-    <button id="question">Ask</button>
-    <p id="answer"></p>
-`
+        class Magic8Ball extends HTMLElement {
+            connectedCallback() {
+                this.innerHTML = `
+                    <button id="question">Ask</button>
+                    <p id="answer"></p>
+                `
                 this.button = document.querySelector("#question");
-                this.button.addEventListener("click", ()=>{
+                this.button.addEventListener("click", () => {
                     const answer = document.querySelector("#answer");
-                    const aAnswers=["yes", "definitely", "no"];
+                    const aAnswers = ["yes", "definitely", "no"];
                     const nAnswer = Math.floor(Math.random() * aAnswers.length);
                     answer.innerHTML = aAnswers[nAnswer];
                 })

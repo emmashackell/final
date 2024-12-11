@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport scaling -->
+    <title>Responsive Image</title> <!-- Title for the browser tab -->
 </head>
+
 <body>
     <main>
-        <h3>Responsive Image</h3>
+        <h1>Responsive Image</h1> <!-- Change to h1 for better screen reader navigation -->
         <figure>
             <picture>
-                <source srcset="readmeimages/400x600.png"
-                    media="(orientation: portrait)">
-                <img src="readmeimages/728x200.png" />
+                <!-- Add source element for portrait orientation -->
+                <source srcset="readmeimages/400x600.png" media="(orientation: portrait)">
+                <!-- Add the default image with alt text for accessibility -->
+                <img src="readmeimages/728x200.png" alt="A responsive placeholder image" style="width: 100%; height: auto;" />
             </picture>
-            <figcaption>responsive placeholder image</figcaption>
+            <figcaption>Responsive placeholder image</figcaption>
         </figure>
     </main>
 </body>
+
 </html>
